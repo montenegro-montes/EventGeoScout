@@ -36,5 +36,5 @@ This project is licensed under the [License Name](link-to-license) - see the [LI
 
 We would like to express our gratitude to the open-source community and contributors who have helped shape and develop EventGeoScout into what it is today.
 
-
+![Java](./ScreenShot/UFLPClient.png)
 ![Android](./ScreenShot/UFLPAndroid.png)

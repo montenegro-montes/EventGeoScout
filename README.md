@@ -12,8 +12,8 @@ To illustrate its adaptability, we provide a case study on the Uncapacitated Fac
 
 ### Screenshot
 
-<img src="./ScreenShot/UFLPClient.png" alt="Java" width="200" height="100">
-<img src="./ScreenShot/UFLPAndroid" alt="Java" width="200" height="100">
+<img src="./ScreenShot/UFLPClient.png" alt="Java" width="200" >
+<img src="./ScreenShot/UFLPAndroid.png" alt="Java" width="200">
 
 ![Java](./ScreenShot/UFLPClient.png)
 ![Android](./ScreenShot/UFLPAndroid.png)

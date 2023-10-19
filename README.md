@@ -19,7 +19,6 @@ Java Application
 Android Application 
 
 <img src="./ScreenShot/UFLPAndroid.png" alt="Android" width="200">
-ion](link-to-documentation).
 
 ## Acknowledgments
 

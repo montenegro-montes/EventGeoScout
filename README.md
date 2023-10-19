@@ -19,14 +19,7 @@ Java Application
 Android Application 
 
 <img src="./ScreenShot/UFLPAndroid.png" alt="Android" width="200">
-
-## Getting Started
-
-For detailed instructions on how to get started with EventGeoScout, please refer to the [documentation](link-to-documentation).
-
-## License
-
-This project is licensed under the [License Name](link-to-license) - see the [LICENSE](LICENSE) file for details.
+ion](link-to-documentation).
 
 ## Acknowledgments
 

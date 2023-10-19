@@ -5,9 +5,6 @@
 
 This repository introduces EventGeoScout, a groundbreaking collaborative geographic information management framework designed to address the ever-evolving landscape of geographic data integration and quality enhancement. EventGeoScout empowers organizations and users to seamlessly integrate open data from diverse sources, facilitating meticulous data revisions and ensuring data quality.
 
-## Key Features
-
-
 
 ### Case Study: Uncapacitated Facility Location Problem
 

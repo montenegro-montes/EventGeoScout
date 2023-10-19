@@ -1,0 +1,116 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.MapFragment"
+        android:layout_weight="1.07"
+        android:layout_gravity="center_horizontal|bottom" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Layer Name"
+            android:id="@+id/textView4"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Type"
+            android:layout_gravity="right"
+            android:id="@+id/textView3"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/textType"
+            android:layout_alignStart="@+id/textType"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Layer Name"
+            android:id="@+id/textLayerName"
+            android:textColor="#000000"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4" />
+
+        <TextView
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Type"
+            android:id="@+id/textType"
+            android:layout_gravity="right"
+            android:textColor="#000000"
+
+            android:layout_alignTop="@+id/textLayerName"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="53dp"
+            android:layout_marginEnd="53dp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Location"
+            android:id="@+id/button"
+            android:onClick="onCheckLocalization"
+            android:layout_marginLeft="15dip"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="15dip" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:id="@+id/button2"
+            android:onClick="onClear"
+            android:layout_marginLeft="20dip"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="15dip" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/saveButton"
+            android:onClick="onSave"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="15dip"
+            android:layout_marginLeft="20dip" />
+    </LinearLayout>
+
+
+
+</FrameLayout>
+
+
+
+

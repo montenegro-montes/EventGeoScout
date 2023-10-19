@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ufdl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="es.uma.mapas.UFDLActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/layerFac"
+        android:layout_below="@+id/LayerClient"
+        android:layout_toRightOf="@+id/listViewLayers"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="RtlHardcoded">
+
+        <TextView
+            android:text="@string/facility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:id="@+id/textViewFacility"
+            android:layout_weight="0.24" />
+
+        <Spinner
+            android:layout_height="20dp"
+            android:id="@+id/spinnerFacility"
+            android:layout_weight="1"
+            android:layout_width="30dp" />
+
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewLayers"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="180dp" />
+
+
+    <Button
+        android:text="@string/calculate_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonCalculateCost"
+        android:onClick="onClick"
+        android:layout_alignBottom="@+id/listViewLayers"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/LayerClient"
+        tools:ignore="RtlHardcoded"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:text="Clients: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:id="@+id/textViewClient"
+            android:layout_weight="0.24" />
+
+        <Spinner
+            android:layout_height="20dp"
+            android:id="@+id/spinnerClient"
+            android:layout_weight="1"
+            android:layout_width="30dp" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        class="com.google.android.gms.maps.MapFragment"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_below="@+id/listViewLayers"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:text="@string/find_a_solution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonCalculateaSolution"
+        android:onClick="onClick"
+        android:enabled="false"
+        android:layout_below="@+id/map"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/facilities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/buttonCalculateaSolution"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        android:id="@+id/listViewFacility"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Solution cost:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textViewSolution" />
+
+    <ListView
+        android:id="@+id/listViewClient"
+        android:layout_alignTop="@+id/listViewFacility"
+        android:layout_toRightOf="@+id/listViewLayers"
+        android:layout_toEndOf="@+id/listViewLayers"
+        android:layout_height="130dp"
+        android:layout_width="180dp" />
+
+    <TextView
+        android:text="@string/clients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/buttonCalculateaSolution"
+        android:layout_alignLeft="@+id/listViewClient"
+        android:layout_alignStart="@+id/listViewClient" />
+
+</RelativeLayout>

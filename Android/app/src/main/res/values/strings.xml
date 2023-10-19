@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">EventGeoScout</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="legal">Legal Notices</string>
+    <string name="no_maps">Google Maps V2 not available!</string>
+    <string name="normal">Normal</string>
+    <string name="hybrid">Hybrid</string>
+    <string name="satellite">Satellite</string>
+    <string name="terrain">Terrain</string>
+    <string name="title_activity_login">EventGeoScout</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_server">Server.(127.0.0.1:8000)</string>
+    <string name="prompt_login">User</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="layer_admin">Layer Admin.</string>
+    <string name="genetic_alg">Genetic Alg.</string>
+    <string name="not_identified">Not Identified</string>
+    <string name="ufdl">UFDL</string>
+    <string name="logo">Logo</string>
+    <string name="calculate_cost">Calculate Cost</string>
+    <string name="client">Client:</string>
+    <string name="clients">Clients</string>
+    <string name="facilities">Facilities</string>
+    <string name="facility">Facility:</string>
+    <string name="find_a_solution">Find a solution</string>
+</resources>

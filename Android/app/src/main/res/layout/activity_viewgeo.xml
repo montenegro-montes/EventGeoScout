@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.MapFragment"
+        android:layout_weight="1.07"
+        android:layout_gravity="center_horizontal|bottom" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="116dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Layer Name"
+                android:id="@+id/textView4"
+                android:layout_above="@+id/textLayerName"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="15dip" />
+
+            <TextView
+                android:layout_width="116dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Type"
+                android:layout_gravity="right"
+                android:id="@+id/textView3"
+                android:layout_alignTop="@+id/textView5"
+                android:layout_alignLeft="@+id/textType"
+                android:layout_alignStart="@+id/textType" />
+
+            <TextView
+                android:layout_width="116dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Elements"
+                android:layout_gravity="right"
+                android:id="@+id/textView5"
+                android:layout_above="@+id/textNElements"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Layer Name"
+                android:id="@+id/textLayerName"
+                android:layout_alignTop="@+id/textNElements"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#000000"
+                android:layout_toLeftOf="@+id/textType"
+                android:layout_toStartOf="@+id/textType"
+                android:layout_marginLeft="15dip" />
+
+            <TextView
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Type"
+                android:id="@+id/textType"
+                android:layout_gravity="right"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textNElements"
+                android:layout_toStartOf="@+id/textNElements"
+                android:layout_marginLeft="15dip" />
+
+            <TextView
+                android:layout_width="86dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Nelements"
+                android:id="@+id/textNElements"
+                android:layout_gravity="right"
+                android:textColor="#000000"
+                android:layout_alignTop="@+id/textType"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignLeft="@+id/textView5"
+                android:layout_alignStart="@+id/textView5" />
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>
+
+

@@ -7,22 +7,16 @@ This repository introduces EventGeoScout, a groundbreaking collaborative geograp
 
 ## Key Features
 
-### Platform-Agnostic Data Management
 
-EventGeoScout is committed to platform-agnostic data management. This means that the edited datasets can be accessed and utilized seamlessly through standard Geographic Information System (GIS) tools, reducing maintenance overheads for organizations and preserving data relevance.
-
-### Empowering Users
-
-EventGeoScout goes beyond traditional data integration. It empowers users to unlock the full potential of geographical information by streamlining data generation and providing flexibility in handling layered geographic data challenges. 
 
 ### Case Study: Uncapacitated Facility Location Problem
 
 To illustrate its adaptability, we provide a case study on the Uncapacitated Facility Location Problem, showcasing the framework's capabilities in solving real-world geographical challenges.
 
-### Advanced Techniques
+### Screenshot
 
-Our tool incorporates advanced techniques, including genetic algorithms, to deliver exceptional performance across both traditional computing platforms and modern smartphones.
-
+![Java](./ScreenShot/UFLPClient.png)
+![Android](./ScreenShot/UFLPAndroid.png)
 
 ## Getting Started
 
@@ -36,5 +30,4 @@ This project is licensed under the [License Name](link-to-license) - see the [LI
 
 We would like to express our gratitude to the open-source community and contributors who have helped shape and develop EventGeoScout into what it is today.
 
-![Java](./ScreenShot/UFLPClient.png)
-![Android](./ScreenShot/UFLPAndroid.png)
+

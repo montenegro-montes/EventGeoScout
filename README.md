@@ -13,9 +13,11 @@ To illustrate its adaptability, we provide a case study on the Uncapacitated Fac
 ### Screenshot
 
 Java Application
+
 <img src="./ScreenShot/UFLPClient.png" alt="Java" width="200" >
 
 Android Application 
+
 <img src="./ScreenShot/UFLPAndroid.png" alt="Android" width="200">
 
 ## Getting Started

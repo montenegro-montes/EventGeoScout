@@ -30,6 +30,9 @@ public class Problem {
 	geneticLog 		_log=null;
 	boolean 		solutionFound	= false;
 	
+	boolean 		[] vectorSol;
+	int 		    [] vectorSolInt;
+	
 	public Problem (String file) throws IOException{
 		
 	
@@ -283,6 +286,9 @@ public class Problem {
 	
 	public int [] clientAsign (){
 		
+		vectorSol 		= new boolean[_facilities];
+		vectorSolInt    = new int[_facilities];
+		
 		int [] clientAsignMin = new int [_clients];
 		double current=0;
 		boolean[] genes = _sol.getGenes();
@@ -298,11 +304,24 @@ public class Problem {
 		        		  }
 		        	  }
 		          }
-        		  clientAsignMin[j]=min_j;	  
+        		  clientAsignMin[j] = min_j;	
+        		  vectorSol [min_j] = true;  
+        		  vectorSolInt [min_j]++;  
     	}
 		return clientAsignMin;
 		
 	}	
+	
+	public boolean[] getSolutionVector() {
+		
+		return   vectorSol;
+	}
+	
+	public int[] getSolutionVectorInt() {
+		
+		return   vectorSolInt;
+	}
+	
 	
 	public void setLog(geneticLog log){
 		_log = log;
@@ -320,5 +339,13 @@ public class Problem {
 	
 	public boolean isSolutionFound(){
 		return solutionFound;
+	}
+	
+	public long getTimeConsumed() {
+		return _timeConsumed;
+	}
+	
+	public int getGenerationConsumed() {
+		return _generacionSol;
 	}
 }

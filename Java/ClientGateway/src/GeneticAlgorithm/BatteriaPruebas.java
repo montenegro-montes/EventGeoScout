@@ -1,6 +1,7 @@
 package GeneticAlgorithm;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 public class BatteriaPruebas {
@@ -8,6 +9,8 @@ public class BatteriaPruebas {
 	String _file;
 	double _solucion;
 	int _poblacion = 0, _generaciones=0;
+	long TimeConsumed;
+	int  generationConsumed =0;
 	
 	public BatteriaPruebas (String file,double solucion){
 		_file = file;
@@ -40,9 +43,51 @@ public class BatteriaPruebas {
     	problemCurrent.setGenerationCount(generationCountSol);
     	problemCurrent.setHisttoryFitnessEliStd(genProblemBasic.getHistorySTDFitness());
 
-    	problemCurrent.printSolution(print_problema);
+    	if (print_problema) problemCurrent.printSolution(print_problema);
+    	
+    	
+    	TimeConsumed			 = problemCurrent.getTimeConsumed();
+    	generationConsumed   = problemCurrent.getGenerationConsumed();
     	
     	genProblemBasic.clear();
+	}
+	
+	public long getTimeConsumed() {
+		return TimeConsumed;
+	}
+	
+	
+	public int getGenerationConsumed() {
+		return generationConsumed;
+	}
+	
+	public static double Avg (long []timesConsumed) {
+		int sumatoria = 0;
+		for (int x = 0; x < timesConsumed.length; x++) {
+		    sumatoria += timesConsumed[x];
+		}
+		double avg = sumatoria / timesConsumed.length;
+	
+		return avg;
+	}
+	
+	public static void printTime (long []timesConsumed) {
+		
+		System.out.println("\n\n Time:  ");
+		
+		for (int x = 0; x < timesConsumed.length; x++) {
+		    System.out.print(timesConsumed[x]+ " ");
+		}
+		System.out.println(" ");
+	}
+	
+	public static double best (long []timesConsumed) {
+		Arrays.sort(timesConsumed);
+		return timesConsumed[0];
+	}
+	
+	public static double worst (long []timesConsumed) {
+		return timesConsumed[timesConsumed.length-1];
 	}
 	
 	 public static void main(String[] args) throws IOException {
@@ -69,7 +114,7 @@ public class BatteriaPruebas {
 		 34.648596222871625 169.90987005455943 124.99261611907835 103.73192260689697 228.7691063804953 167.5598182272201  
 		 105.02802173253049 95.15763934865137 132.802286539909 226.74253176806502 263.0258918812148 37.39839654670215  */
 	    	
-		 	int wharehouses =	6;
+		 /*	int wharehouses =	6;
 	    	int clients		= 	8;
 	    	double [] fixed_costs 		= {	29.0, 196.0, 241.0, 949.0, 385.0, 357.0 }; 
 	    	double [] [] transport_cost = {
@@ -107,7 +152,7 @@ public class BatteriaPruebas {
 
 	    	problemCurrent.setGenerationCount(generationCountSol);
 
-	    	problemCurrent.printSolution(true);
+	    	problemCurrent.printSolution(true);*/
 		 
 	        
 	    	/*int wharehouses =	5;
@@ -149,6 +194,9 @@ public class BatteriaPruebas {
 			//double [] soluciones = {793439.563,851495.325,893076.713,928941.750};
 		 	
 		 	
+		     //String [] problemas ={"cap71.txt"};
+			 //double [] soluciones = {932615.750};
+		 
 		 	/*String [] problemas ={"capa.txt"};
 		 	double [] soluciones = {17156454.478}; */
 		 	
@@ -160,23 +208,44 @@ public class BatteriaPruebas {
 									796648.438,854704.200,893782.113,928941.750,
 									793439.563,851495.325,893076.713,928941.750};*/
 									  
-		 	/*String [] problemas = {"capa.txt", "capb.txt","capc.txt"};
-		 	double [] soluciones ={17156454.478,12979071.581,11505594.329};*/
+		 	//String [] problemas = {"capa.txt", "capb.txt","capc.txt"};
+		 	//double [] soluciones ={17156454.478,12979071.581,11505594.329};
 
-		
-		 /*	int poblacion = 200, generaciones = 5000;
+		 	String [] problemas = {"capc.txt"};
+		 	double [] soluciones ={11505594.329};
+		 	
+		 	int poblacion = 200, generaciones = 5000;
 		 	
 
-		 	int nRepeticiones	=	2;
+		 	int nRepeticiones		=	50;
+		 	long [] timesConsumed 			= new long [nRepeticiones];
+		 	long [] generacionesConsumed 	= new long [nRepeticiones];
 		 	
-		 for (int j=0;j<nRepeticiones;j++)	
 		 	for (int i=0;i<problemas.length;i++){
 		 		System.out.println("\n\n +++++++++++ PROBLEMA "+i+" "+problemas[i]);
-		 		BatteriaPruebas bateria = new BatteriaPruebas (problemas[i],soluciones[i]);
-			 	bateria.setParamGenetico(poblacion, generaciones);
-			 	bateria.run(false);
-		 	}*/
-		
+		 		
+		 		for (int j=0;j<nRepeticiones;j++) {	
+		 			System.out.print(" "+j);
+		 			BatteriaPruebas bateria  = new BatteriaPruebas (problemas[i],soluciones[i]);
+		 			bateria.setParamGenetico(poblacion, generaciones);
+		 			bateria.run(false);
+		 			timesConsumed [j] 		 = bateria.getTimeConsumed();
+		 			generacionesConsumed [j] = bateria.getGenerationConsumed();
+		 	}
+		 		 //BatteriaPruebas.printTime(timesConsumed);
+		 		System.out.println(" \n M T "+BatteriaPruebas.Avg(timesConsumed)+" "+BatteriaPruebas.best(timesConsumed)+" "+BatteriaPruebas.worst(timesConsumed));
+		 		System.out.println("  M G "+BatteriaPruebas.Avg(generacionesConsumed)+" "+BatteriaPruebas.best(generacionesConsumed)+" "+BatteriaPruebas.worst(generacionesConsumed));
+				 //System.out.println(" \n+++++++++++ MEDIA TIME "+BatteriaPruebas.Avg(timesConsumed));
+				 //System.out.println(" +++++++++++ BEST  TIME " +BatteriaPruebas.best(timesConsumed));
+				 //System.out.println(" +++++++++++ WORST TIME "+BatteriaPruebas.worst(timesConsumed));
+				 
+				 //BatteriaPruebas.printTime(generacionesConsumed);
+				 
+				 //System.out.println(" \n+++++++++++ MEDIA Generation "+BatteriaPruebas.Avg(generacionesConsumed));
+				 //System.out.println(" +++++++++++ BEST Generation " +BatteriaPruebas.best(generacionesConsumed));
+				 //System.out.println(" +++++++++++ WORST Generation "+BatteriaPruebas.worst(generacionesConsumed));
+		 }
+		 
 		
 	 }
 }

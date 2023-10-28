@@ -8,7 +8,6 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -19,6 +18,7 @@ import java.util.List;
 
 import MapFrame.Layer;
 import MapFrame.Punto;
+import androidx.appcompat.app.AppCompatActivity;
 import es.uma.Kernel.Mediator;
 import es.uma.Kernel.NetworkManager;
 

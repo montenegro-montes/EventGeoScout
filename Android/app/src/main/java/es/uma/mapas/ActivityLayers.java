@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
@@ -13,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import MapFrame.Layer;
+import androidx.appcompat.app.AppCompatActivity;
 import es.uma.Kernel.Mediator;
 import es.uma.Utils.Row;
 

@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.TextView;
@@ -28,6 +27,7 @@ import java.util.List;
 
 import MapFrame.Poly;
 import MapFrame.Punto;
+import androidx.appcompat.app.AppCompatActivity;
 import es.uma.Utils.GeoPoints;
 
 

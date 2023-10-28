@@ -10,7 +10,9 @@ import MapFrame.Poly;
 import MapFrame.Punto;
 import es.uma.Kernel.Mediator;
 
-
+/**
+ * Created by monte on 23/11/15.
+ */
 public class GeoCapture  extends Application {
     private static GeoCapture singleton;
 

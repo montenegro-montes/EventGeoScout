@@ -8,8 +8,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +18,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -38,9 +38,11 @@ import java.util.Random;
 
 import MapFrame.Layer;
 import MapFrame.Punto;
-import simpleGa.Genetico;
-import simpleGa.Individual;
-import simpleGa.Problem;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import GeneticAlgorithms.Genetico;
+import GeneticAlgorithms.Individual;
+import GeneticAlgorithms.Problem;
 
 public class UFDLActivity extends AppCompatActivity implements OnMapReadyCallback{
 

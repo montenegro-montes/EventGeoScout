@@ -5,7 +5,6 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,10 +17,13 @@ import java.net.SocketAddress;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import androidx.appcompat.app.AlertDialog;
 import es.uma.Kernel.Mediator;
 import es.uma.Kernel.NetworkManager;
 
-
+/**
+ * Created by joseamontenegromontes on 19/12/16.
+ */
 
 public class LoginDialogFragment extends DialogFragment {
 

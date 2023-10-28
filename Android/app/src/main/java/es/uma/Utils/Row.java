@@ -1,5 +1,8 @@
 package es.uma.Utils;
 
+/**
+ * Created by monte on 23/11/15.
+ */
 public class Row {
     private String mlayer;
     private int mtype;

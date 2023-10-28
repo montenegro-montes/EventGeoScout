@@ -11,15 +11,15 @@
     tools:context="es.uma.mapas.GeneticAlgActivity">
 
     <ListView
-        android:layout_width="wrap_content"
         android:id="@+id/listViewClient"
+        android:layout_width="wrap_content"
         android:layout_height="120dp"
         android:layout_below="@+id/textView2"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="11dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="11dp"
-        android:layout_marginTop="20dp" />
+        android:layout_marginRight="11dp" />
 
     <TextView
         android:text="Genetic Algorithm Info"
@@ -35,21 +35,19 @@
         android:layout_marginTop="28dp" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:inputType="textMultiLine"
-        android:ems="10"
         android:id="@+id/editTextLog"
-        android:hint="Executation Genetic Algorithm Info"
-        android:cursorVisible="false"
+        android:layout_width="365dp"
+        android:layout_height="211dp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
         android:contextClickable="false"
         android:editable="false"
-        android:textIsSelectable="false"
-        android:autoText="false"
-        android:layout_height="130dp"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp" />
+        android:ems="10"
+        android:hint="Executation Genetic Algorithm Info"
+        android:inputType="textMultiLine"
+        android:textIsSelectable="false" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -72,14 +70,16 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="Find a Solution"
-        android:layout_height="wrap_content"
         android:id="@+id/buttonLoadProblem"
-        android:onClick="onClick"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/textViewProblem"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:onClick="onClick"
+        android:text="Find a Solution" />
+
+
 
     <TextView
         android:text="Solution"
@@ -105,4 +105,29 @@
         android:layout_toEndOf="@+id/textView2"
         android:layout_marginTop="5dp" />
 
+    <Button
+        android:id="@+id/buttonPlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextLog"
+        android:layout_alignRight="@+id/listViewClient"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:enabled="false"
+        android:onClick="onClick"
+        android:text="Show plots" />
+
+    <Button
+        android:id="@+id/buttonLoadTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewProblem"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="595dp"
+        android:onClick="onClick"
+        android:text="Running Test" />
 </RelativeLayout>
